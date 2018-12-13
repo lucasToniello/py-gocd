@@ -8,7 +8,7 @@ class TemplateConfig(Endpoint):
     base_path = 'go/api/admin/templates'
     id = 'name'
 
-    def __init__(self, server, name, api_version=2):
+    def __init__(self, server, name, api_version=4):
         """A wrapper for the `Go template config API`__
 
         .. __: https://api.go.cd/current/#template-config

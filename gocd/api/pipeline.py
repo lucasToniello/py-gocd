@@ -13,7 +13,7 @@ class Pipeline(Endpoint):
     #: The result of a job/stage has been finalised when these values are set
     final_results = ['Passed', 'Failed']
 
-    def __init__(self, server, name):
+    def __init__(self, server, name, api_version=1):
         """A wrapper for the `Go pipeline API`__
 
         .. __: http://api.go.cd/current/#pipelines
@@ -25,6 +25,7 @@ class Pipeline(Endpoint):
         """
         self.server = server
         self.name = name
+        self.api_version = api_version
 
     def history(self, offset=0):
         """Lists previous instances/runs of the pipeline
@@ -52,7 +53,7 @@ class Pipeline(Endpoint):
         Returns:
           Response: :class:`gocd.api.response.Response` object
         """
-        return self._post('/releaseLock', headers={"Confirm": True})
+        return self._post('/unlock', headers=self._default_headers())
 
     #: This is an alias for :meth:`release`
     unlock = release
@@ -70,7 +71,7 @@ class Pipeline(Endpoint):
         Returns:
           Response: :class:`gocd.api.response.Response` object
         """
-        return self._post('/pause', headers={"Confirm": True}, pauseCause=reason)
+        return self._post('/pause', headers=self._default_headers(True), pause_cause=reason)
 
     def unpause(self):
         """Unpauses the pipeline
@@ -82,7 +83,7 @@ class Pipeline(Endpoint):
         Returns:
           Response: :class:`gocd.api.response.Response` object
         """
-        return self._post('/unpause', headers={"Confirm": True})
+        return self._post('/unpause', headers=self._default_headers())
 
     def status(self):
         """Returns the current status of this pipeline
@@ -150,7 +151,7 @@ class Pipeline(Endpoint):
             variables=variables,
             secure_variables=secure_variables,
             material_fingerprint=materials,
-            headers={"Confirm": True},
+            headers=self._default_headers(),
         )
 
         scheduling_args = dict((k, v) for k, v in scheduling_args.items() if v is not None)
@@ -267,3 +268,18 @@ class Pipeline(Endpoint):
             stage_name=name,
             pipeline_counter=pipeline_counter,
         )
+
+    def _default_headers(self, has_data=False):
+        if has_data:
+            return {
+                "Accept": self._accept_header_value,
+                "Content-Type": "application/json"
+            }
+        return {
+            "Accept": self._accept_header_value,
+            "X-GoCD-Confirm": True
+        }
+
+    @property
+    def _accept_header_value(self):
+        return "application/vnd.go.cd.v{0}+json".format(self.api_version)

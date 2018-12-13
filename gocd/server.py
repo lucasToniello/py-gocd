@@ -1,4 +1,5 @@
 import re
+import json
 
 try:
     # python2
@@ -113,7 +114,7 @@ class Server(object):
           file like object: The response from a
             :func:`urllib2.urlopen` call
         """
-        return self.request(path)
+        return self.request(path, method='GET')
 
     def post(self, path, **post_args):
         """Performs a HTTP POST request to the Go server
@@ -130,7 +131,7 @@ class Server(object):
           file like object: The response from a
             :func:`urllib2.urlopen` call
         """
-        return self.request(path, data=post_args or {})
+        return self.request(path, data=post_args, method='POST')
 
     def request(self, path, data=None, headers=None, method=None):
         """Performs a HTTP request to the Go server
@@ -264,14 +265,14 @@ class Server(object):
         data = self._inject_authenticity_token(data, path)
         return CustomRequest(
             self._url(path),
-            data=self._encode_data(data),  # None or False == GET request
+            data=self._encode_data(data),
             headers=default_headers,
             method=method,
         )
 
     def _encode_data(self, data):
         if isinstance(data, dict):
-            return urlencoder.urlencode(data).encode('utf-8')
+            return json.dumps(data).encode('utf-8')
         elif isinstance(data, str):
             return data.encode('utf-8')
         elif isinstance(data, bytes):

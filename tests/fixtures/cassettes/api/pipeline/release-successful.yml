@@ -4,11 +4,12 @@ interactions:
     headers:
       Connection: [close]
       Content-Length: ['0']
-      Content-Type: [application/x-www-form-urlencoded]
+      Content-Type: [application/json]
       Host: ['localhost:8153']
       User-Agent: [py-gocd]
+      X-GoCD-Confirm: [True]
     method: POST
-    uri: http://localhost:8153/go/api/pipelines/Simple-with-lock/releaseLock
+    uri: http://localhost:8153/go/api/pipelines/Simple-with-lock/unlock
   response:
     body: {string: !!python/unicode 'pipeline lock released for Simple-with-lock
 

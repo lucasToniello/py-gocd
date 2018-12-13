@@ -44,14 +44,13 @@ class Endpoint(object):
         return self._base_path
 
     def _join_path(self, path):
-        # TODO: Make this more robust. `urlparse.urljoin` didn't quite work as I wanted.
         return '{0}/{1}'.format(self.get_base_path(), path).replace('//', '/')
 
     def _get(self, path, ok_status=None, headers=None):
-        return self._request(path, ok_status=ok_status, headers=headers)
+        return self._request(path, ok_status=ok_status, headers=headers, method="GET")
 
     def _post(self, path, ok_status=None, headers=None, **post_args):
-        return self._request(path, ok_status=ok_status, data=post_args or {}, headers=headers)
+        return self._request(path, ok_status=ok_status, data=post_args or None, headers=headers, method="POST")
 
     # TODO: Add tests for adding headers
     def _request(self, path, ok_status, data=None, headers=None, method=None):

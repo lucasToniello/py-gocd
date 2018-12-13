@@ -20,7 +20,7 @@ interactions:
       bHNlfV0sICJ0aW1lciI6IG51bGwsICJlbnZpcm9ubWVudF92YXJpYWJsZXMiOiBbXSwgIm5hbWUi
       OiAiUHlHb0NkIiwgInBhcmFtZXRlcnMiOiBbXX0=
     headers:
-      Accept: [application/vnd.go.cd.v1+json]
+      Accept: [application/vnd.go.cd.v6+json]
       Connection: [close]
       Content-Length: ['998']
       Content-Type: [application/json]
@@ -33,7 +33,7 @@ interactions:
     body: {string: "{\n  \"message\": \"You are not authorized to access this resource!\"\n}\n"}
     headers:
       Connection: [close]
-      Content-Type: [application/vnd.go.cd.v1+json]
+      Content-Type: [application/vnd.go.cd.v6+json]
       Date: ['Tue, 03 May 2016 23:11:08 GMT']
       Expires: ['Thu, 01 Jan 1970 00:00:00 GMT']
       Set-Cookie: ['JSESSIONID=mhpup5wpf5011ofhult7iwzb8;Path=/go;Expires=Tue, 17-May-2016
@@ -61,7 +61,7 @@ interactions:
       bHNlfV0sICJ0aW1lciI6IG51bGwsICJlbnZpcm9ubWVudF92YXJpYWJsZXMiOiBbXSwgIm5hbWUi
       OiAiUHlHb0NkIiwgInBhcmFtZXRlcnMiOiBbXX0=
     headers:
-      Accept: [application/vnd.go.cd.v1+json]
+      Accept: [application/vnd.go.cd.v6+json]
       Authorization: [Basic Ym90OjEyMzQ1Njc4]
       Connection: [close]
       Content-Length: ['998']
@@ -101,7 +101,7 @@ interactions:
     headers:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]
-      Content-Type: [application/vnd.go.cd.v1+json; charset=utf-8]
+      Content-Type: [application/vnd.go.cd.v6+json; charset=utf-8]
       Date: ['Tue, 03 May 2016 23:11:08 GMT']
       ETag: ['"d5063b57d52e43903c87daf171332d0f"']
       Expires: ['Thu, 01 Jan 1970 00:00:00 GMT']

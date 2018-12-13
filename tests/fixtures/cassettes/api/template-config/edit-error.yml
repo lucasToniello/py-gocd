@@ -17,7 +17,7 @@ interactions:
       true, "approval": {"type": "success", "authorization": {"users": [], "roles":
       []}}, "never_cleanup_artifacts": false}], "name": "MyTemplate"}'
     headers:
-      Accept: [application/vnd.go.cd.v2+json]
+      Accept: [application/vnd.go.cd.v4+json]
       Connection: [close]
       Content-Length: ['1254']
       Content-Type: [application/json]
@@ -33,7 +33,7 @@ interactions:
     headers:
       cache-control: [no-cache]
       connection: [close]
-      content-type: [application/vnd.go.cd.v2+json; charset=utf-8]
+      content-type: [application/vnd.go.cd.v4+json; charset=utf-8]
       date: ['Mon, 21 Nov 2016 15:18:43 GMT']
       expires: ['Thu, 01 Jan 1970 00:00:00 GMT']
       set-cookie: ['JSESSIONID=11xso1ho5t2tkwhl9w3a5s6ja;Path=/go;Expires=Mon, 05-Dec-2016

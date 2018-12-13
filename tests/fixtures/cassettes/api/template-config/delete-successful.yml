@@ -2,7 +2,7 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: [application/vnd.go.cd.v2+json]
+      Accept: [application/vnd.go.cd.v4+json]
       Connection: [close]
       Content-Type: [application/json]
       Host: ['127.0.0.1:8153']
@@ -15,7 +15,7 @@ interactions:
     headers:
       cache-control: ['max-age=0, private, must-revalidate']
       connection: [close]
-      content-type: [application/vnd.go.cd.v2+json; charset=utf-8]
+      content-type: [application/vnd.go.cd.v4+json; charset=utf-8]
       date: ['Mon, 21 Nov 2016 15:51:26 GMT']
       etag: ['"9d48cbffda63fda24dafd99f1ceeaecc"']
       expires: ['Thu, 01 Jan 1970 00:00:00 GMT']
