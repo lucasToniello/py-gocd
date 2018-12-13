@@ -2,7 +2,7 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: [application/vnd.go.cd.v2+json]
+      Accept: [application/vnd.go.cd.v4+json]
       Connection: [close]
       Host: ['127.0.0.1:8153']
       User-Agent: [py-gocd]
@@ -50,7 +50,7 @@ interactions:
     headers:
       cache-control: ['max-age=0, private, must-revalidate']
       connection: [close]
-      content-type: [application/vnd.go.cd.v2+json; charset=utf-8]
+      content-type: [application/vnd.go.cd.v4+json; charset=utf-8]
       date: ['Mon, 21 Nov 2016 15:01:34 GMT']
       etag: ['"daee15ed82d2286d7a5956a6c88f5069"']
       expires: ['Thu, 01 Jan 1970 00:00:00 GMT']

@@ -17,7 +17,7 @@ interactions:
       [], "name": "PostJob"}], "environment_variables": [{"secure": false, "name":
       "ENV_VAR1", "value": "value1"}]}], "name": "MyTemplateCreated"}'
     headers:
-      Accept: [application/vnd.go.cd.v2+json]
+      Accept: [application/vnd.go.cd.v4+json]
       Connection: [close]
       Content-Length: ['1261']
       Content-Type: [application/json]
@@ -67,7 +67,7 @@ interactions:
     headers:
       cache-control: ['max-age=0, private, must-revalidate']
       connection: [close]
-      content-type: [application/vnd.go.cd.v2+json; charset=utf-8]
+      content-type: [application/vnd.go.cd.v4+json; charset=utf-8]
       date: ['Mon, 21 Nov 2016 15:24:09 GMT']
       etag: ['"ad456c1f335a193ace3289f6554eb06f"']
       expires: ['Thu, 01 Jan 1970 00:00:00 GMT']

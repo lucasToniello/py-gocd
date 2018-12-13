@@ -18,7 +18,7 @@ interactions:
       true, "environment_variables": [{"secure": false, "name": "ENV_VAR1", "value":
       "value1"}]}], "name": "MyTemplate"}'
     headers:
-      Accept: [application/vnd.go.cd.v2+json]
+      Accept: [application/vnd.go.cd.v4+json]
       Connection: [close]
       Content-Length: ['1312']
       Content-Type: [application/json]
@@ -70,7 +70,7 @@ interactions:
     headers:
       cache-control: ['max-age=0, private, must-revalidate']
       connection: [close]
-      content-type: [application/vnd.go.cd.v2+json; charset=utf-8]
+      content-type: [application/vnd.go.cd.v4+json; charset=utf-8]
       date: ['Mon, 21 Nov 2016 15:17:47 GMT']
       etag: ['"fac2d22ead12819eb10fe0763b0ff534"']
       expires: ['Thu, 01 Jan 1970 00:00:00 GMT']

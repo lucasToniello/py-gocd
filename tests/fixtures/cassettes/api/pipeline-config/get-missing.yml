@@ -2,7 +2,7 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: [application/vnd.go.cd.v1+json]
+      Accept: [application/vnd.go.cd.v6+json]
       Connection: [close]
       Host: ['192.168.99.100:8153']
       User-Agent: [py-gocd]
@@ -13,7 +13,7 @@ interactions:
         access this resource!\"\n}\n"}
     headers:
       connection: [close]
-      content-type: [application/vnd.go.cd.v1+json]
+      content-type: [application/vnd.go.cd.v6+json]
       date: ['Tue, 03 May 2016 20:50:12 GMT']
       expires: ['Thu, 01 Jan 1970 00:00:00 GMT']
       set-cookie: ['JSESSIONID=1ch2ary2jtzme1vikydy76acat;Path=/go;Expires=Tue, 17-May-2016
@@ -23,7 +23,7 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: [application/vnd.go.cd.v1+json]
+      Accept: [application/vnd.go.cd.v6+json]
       Authorization: [Basic Ym90OjEyMzQ1Njc4]
       Connection: [close]
       Host: ['192.168.99.100:8153']
@@ -36,7 +36,7 @@ interactions:
     headers:
       cache-control: [no-cache]
       connection: [close]
-      content-type: [application/vnd.go.cd.v1+json; charset=utf-8]
+      content-type: [application/vnd.go.cd.v6+json; charset=utf-8]
       date: ['Tue, 03 May 2016 20:50:12 GMT']
       expires: ['Thu, 01 Jan 1970 00:00:00 GMT']
       set-cookie: ['JSESSIONID=73o5qwcfi68oope8aqugogab;Path=/go;Expires=Tue, 17-May-2016

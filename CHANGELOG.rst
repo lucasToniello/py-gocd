@@ -2,6 +2,24 @@
 Change Log
 ==========
 
+`0.15.2`_ - 2018-12-13
+======================
+
+**Changed**
+
+* `PipelineConfig`_ now uses API version 6 by default.
+
+* `TemplateConfig`_ now uses API version 4 by default.
+
+* `Pipeline`_ API now has it's own version, and it's set to 1 by default.
+
+* All POST data is JSON encoded now.
+
+  Added by `@icemage144`_
+
+.. _@icemage144: https://github.com/icemage144
+.. _Pipeline: http://py-gocd.readthedocs.org/en/latest/gocd.api.html#gocd.api.Pipeline
+
 `0.15.1`_ - 2017-05-19
 ======================
 
@@ -196,6 +214,7 @@ Changed
 
 Nothing much to say here, initial public release. :)
 
+.. _`0.15.2`: https://github.com/gaqzi/py-gocd/compare/v0.15.1...v0.15.2
 .. _`0.15.1`: https://github.com/gaqzi/py-gocd/compare/v0.15.0...v0.15.1
 .. _`0.15.0`: https://github.com/gaqzi/py-gocd/compare/v0.14.0...v0.15.0
 .. _`0.14.0`: https://github.com/gaqzi/py-gocd/compare/v0.13.0...v0.14.0

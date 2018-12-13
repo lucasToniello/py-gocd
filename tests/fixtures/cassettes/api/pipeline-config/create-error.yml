@@ -20,7 +20,7 @@ interactions:
       bnVsbCwgInRlbXBsYXRlIjogbnVsbCwgIm5hbWUiOiAiUHlHb0NkIiwgInBhcmFtZXRlcnMiOiBb
       XSwgImdyb3VwIjogIlRvb2xzIiwgInRpbWVyIjogbnVsbH0=
     headers:
-      Accept: [application/vnd.go.cd.v1+json]
+      Accept: [application/vnd.go.cd.v6+json]
       Connection: [close]
       Content-Length: ['1004']
       Content-Type: [application/json]
@@ -60,7 +60,7 @@ interactions:
       bnVsbCwgInRlbXBsYXRlIjogbnVsbCwgIm5hbWUiOiAiUHlHb0NkIiwgInBhcmFtZXRlcnMiOiBb
       XSwgImdyb3VwIjogIlRvb2xzIiwgInRpbWVyIjogbnVsbH0=
     headers:
-      Accept: [application/vnd.go.cd.v1+json]
+      Accept: [application/vnd.go.cd.v6+json]
       Authorization: [Basic Ym90OjEyMzQ1Njc4]
       Connection: [close]
       Content-Length: ['1004']

@@ -2,7 +2,7 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: [application/vnd.go.cd.v2+json]
+      Accept: [application/vnd.go.cd.v4+json]
       Connection: [close]
       Host: ['127.0.0.1:8153']
       User-Agent: [py-gocd]
@@ -14,7 +14,7 @@ interactions:
     headers:
       cache-control: [no-cache]
       connection: [close]
-      content-type: [application/vnd.go.cd.v2+json; charset=utf-8]
+      content-type: [application/vnd.go.cd.v4+json; charset=utf-8]
       date: ['Mon, 21 Nov 2016 15:13:55 GMT']
       expires: ['Thu, 01 Jan 1970 00:00:00 GMT']
       set-cookie: ['JSESSIONID=1h236hdwkgws5b4ndbk9np0iq;Path=/go;Expires=Mon, 05-Dec-2016

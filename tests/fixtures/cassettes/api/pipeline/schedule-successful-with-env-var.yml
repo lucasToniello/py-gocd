@@ -4,7 +4,7 @@ interactions:
     headers:
       Connection: [close]
       Content-Length: ['35']
-      Content-Type: [application/x-www-form-urlencoded]
+      Content-Type: [application/json]
       Host: ['localhost:8153']
       User-Agent: [py-gocd]
     method: POST
