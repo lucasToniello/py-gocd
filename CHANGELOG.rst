@@ -2,6 +2,13 @@
 Change Log
 ==========
 
+`0.16.0`_ - 2018-12-18
+======================
+
+* `PipelineConfig`_.create now works properly.
+
+  Fixed by `@henriquegemignani`_
+
 `0.15.2`_ - 2018-12-13
 ======================
 
@@ -214,6 +221,7 @@ Changed
 
 Nothing much to say here, initial public release. :)
 
+.. _`0.16.0`: https://github.com/gaqzi/py-gocd/compare/v0.15.2...v0.16.0
 .. _`0.15.2`: https://github.com/gaqzi/py-gocd/compare/v0.15.1...v0.15.2
 .. _`0.15.1`: https://github.com/gaqzi/py-gocd/compare/v0.15.0...v0.15.1
 .. _`0.15.0`: https://github.com/gaqzi/py-gocd/compare/v0.14.0...v0.15.0
