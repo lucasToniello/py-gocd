@@ -57,8 +57,9 @@ class PipelineConfig(Endpoint):
                              headers=headers,
                              method="PUT")
 
-    def create(self, config):
-        """Update pipeline config for specified pipeline name.
+    def create(self, config, group=None):
+        """Creates a new pipeline with the given config in the given group.
+        If the `group` parameter is None, it's expected there will be a field `group` in config
 
         .. __: https://api.go.cd/current/#edit-pipeline-config
 
@@ -67,9 +68,14 @@ class PipelineConfig(Endpoint):
         """
 
         assert config["name"] == self.name, "Given config is not for this pipeline"
-        assert "group" in config, "Given config has no group"
+        if group is None:
+            assert "group" in config, "Given config has no group"
+            group = config["group"]
 
-        data = self._json_encode(config)
+        data = self._json_encode({
+            "group": group,
+            "pipeline": config
+        })
         headers = self._default_headers()
 
         return self._request("",
