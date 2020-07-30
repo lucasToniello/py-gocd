@@ -40,7 +40,7 @@ class Pipeline(Endpoint):
         Returns:
           Response: :class:`gocd.api.response.Response` object
         """
-        return self._get('/history/{offset:d}'.format(offset=offset or 0))
+        return self._get("/history", headers=self._default_headers())
 
     def release(self):
         """Releases a previously locked pipeline
