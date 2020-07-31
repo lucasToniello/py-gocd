@@ -27,7 +27,7 @@ class Pipeline(Endpoint):
         self.name = name
         self.api_version = api_version
 
-    def history(self, offset=0):
+    def history(self, page_size=10, after=None, before=None):
         """Lists previous instances/runs of the pipeline
 
         See the `Go pipeline history documentation`__ for example responses.
@@ -35,12 +35,21 @@ class Pipeline(Endpoint):
         .. __: http://api.go.cd/current/#get-pipeline-history
 
         Args:
-          offset (int, optional): How many instances to skip for this response.
+          page_size (int, optional): How many records will be retrieved from the
+                                     current page (Can be between 10 and 100)
+          after (int, optional): Cursor for the next page
+          before (int, optional): Cursor for the previous page
 
         Returns:
           Response: :class:`gocd.api.response.Response` object
         """
-        return self._get("/history", headers=self._default_headers())
+
+        if after is not None:
+            return self._get('/history?page_size={}&{}' .format(page_size, after),
+                            headers=self._default_headers())
+        
+        return self._get('/history?page_size={}&{}' .format(page_size, before),
+                        headers=self._default_headers())
 
     def release(self):
         """Releases a previously locked pipeline
