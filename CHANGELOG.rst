@@ -2,6 +2,16 @@
 Change Log
 ==========
 
+`0.17.0`_ - 2020-08-03
+======================
+
+**Changed**
+
+* `PipelineConfig`_ now uses API version 10 by default.
+
+* Fixes `Pipeline.history()` for GoCD 19.7.0
+
+
 `0.16.0`_ - 2018-12-18
 ======================
 

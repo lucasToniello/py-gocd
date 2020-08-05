@@ -40,11 +40,11 @@ if sys.version_info < (2, 7):
 README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
 setup(
-    name='gocd-bridge',
+    name='gocd',
     author='TappsGames',
     author_email='',
     license='MIT License',
-    url='https://github.com/TappsGames/py-gocd',
+    url='https://github.com/lucasToniello/py-gocd',
     description='A Python library for interacting with Go Continuous Delivery API',
     long_description=README,
     version=version(),
