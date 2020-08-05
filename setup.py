@@ -40,7 +40,7 @@ if sys.version_info < (2, 7):
 README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
 setup(
-    name='gocd',
+    name='gocd_api',
     author='TappsGames',
     author_email='',
     license='MIT License',
