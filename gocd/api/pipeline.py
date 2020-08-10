@@ -127,7 +127,7 @@ class Pipeline(Endpoint):
             else:
                 return Response._from_json(history['pipelines'][0])
 
-        return self._get('/instance/{counter:d}'.format(counter=counter))
+        return self._get('/{counter:d}'.format(counter=counter))
 
     def schedule(self, variables=None, secure_variables=None, materials=None,
                  return_new_instance=False, backoff_time=1.0):
