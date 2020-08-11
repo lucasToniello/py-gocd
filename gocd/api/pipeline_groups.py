@@ -2,13 +2,14 @@ from gocd.api.endpoint import Endpoint
 
 
 class PipelineGroups(Endpoint):
-    base_path = 'go/api/config'
+    base_path = 'go/api/admin'
     _id = False
     _response = None
     _pipelines = None
 
-    def __init__(self, server):
+    def __init__(self, server, api_version=1):
         self.server = server
+        self.api_version = api_version
 
     def get_pipeline_groups(self):
         """Makes a call to the Go server to fetch the pipeline groups.
@@ -18,7 +19,7 @@ class PipelineGroups(Endpoint):
         Returns:
           Response: an instance of :class:`gocd.api.Response`
         """
-        self._response = self._get('/pipeline_groups')
+        self._response = self._get('/pipeline_groups', headers=self._default_headers())
 
         return self._response
 
@@ -53,3 +54,13 @@ class PipelineGroups(Endpoint):
                     self._pipelines.add(pipeline['name'])
 
         return self._pipelines
+
+    def _default_headers(self):
+        return {
+            "Accept": self._accept_header_value,
+            "X-GoCD-Confirm": True
+        }
+
+    @property
+    def _accept_header_value(self):
+        return "application/vnd.go.cd.v{0}+json".format(self.api_version)
