@@ -40,6 +40,9 @@ class Pipeline(Endpoint):
           after (int, optional): Cursor for the next page
           before (int, optional): Cursor for the previous page
 
+          Both the cursor for 'after' and 'before' must have the syntax <cursor>=<value>
+          e.g: after=1027
+
         Returns:
           Response: :class:`gocd.api.response.Response` object
         """
